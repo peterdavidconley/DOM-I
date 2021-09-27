@@ -40,3 +40,50 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// Header Element Getters
+
+const header = document.querySelector('header')
+const headerLink1 = document.querySelector('nav a') // services
+const headerLink2 = headerLink1.nextElementSibling; // product 
+const headerLink3 = headerLink2.nextElementSibling; // vision 
+const headerLink4 = headerLink3.nextElementSibling; // features
+const headerLink5 = headerLink4.nextElementSibling; // about
+const headerLink6 = headerLink5.nextElementSibling; // contact
+
+// Injecting content to header getters
+
+headerLink1.textContent = siteContent['nav']["nav-item-1"];
+headerLink2.textContent = siteContent['nav']["nav-item-2"];
+headerLink3.textContent = siteContent['nav']["nav-item-3"];
+headerLink4.textContent = siteContent['nav']["nav-item-4"];
+headerLink5.textContent = siteContent['nav']["nav-item-5"];
+headerLink6.textContent = siteContent['nav']["nav-item-6"];
+
+// "DOM is Awesome" getters
+
+const domHeading = document.querySelector(".cta-text h1");
+const domButton = document.querySelector('.cta-text button')
+const domImg = document.querySelector('#cta-img')
+
+// "Dom is Awesome" content injection
+
+domHeading.textContent = siteContent.cta.h1
+domButton.textContent = siteContent.cta.button
+domImg.src = siteContent.cta['img-src']
+
+// Main Content getters
+
+const mainFeatureHeading = document.querySelector('.top-content h4:nth-of-type(1)');
+const mainFeatureContent = document.querySelector('.top-content p:nth-of-type(1)');
+const mainAboutHeading = document.querySelector('.top-content h4:nth-of-type(2)');
+const mainAboutContent = document.querySelector('.top-content p:nth-of-type(2)');
+
+// Main content posting to DOM
+
+mainFeatureHeading.textContent = siteContent['main-content']['features-h4'];
+mainFeatureContent.textContent = siteContent['main-content']['features-content'];
+mainAboutHeading.textContent = siteContent['main-content']['about-h4'];
+mainAboutContent.textContent = siteContent['main-content']['about-content'];
+
