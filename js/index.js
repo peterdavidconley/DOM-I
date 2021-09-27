@@ -44,7 +44,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Header Element Getters
 
-const header = document.querySelector('header')
 const headerLink1 = document.querySelector('nav a') // services
 const headerLink2 = headerLink1.nextElementSibling; // product 
 const headerLink3 = headerLink2.nextElementSibling; // vision 
@@ -116,3 +115,19 @@ contactAddress.textContent = siteContent.contact.address;
 contactPhone.textContent = siteContent.contact.phone;
 contactEmail.textContent = siteContent.contact.email;
 copyright.textContent = siteContent.footer['copyright']
+
+// Creating new nav links and adding to Header
+
+const navigation = document.querySelector('nav')
+const newNav1 = document.createElement('a');
+newNav1.textContent = 'Team';
+const newNav2 = document.createElement('a')
+newNav2.textContent = 'Mission'
+navigation.appendChild(newNav1)
+navigation.appendChild(newNav2)
+
+// Changing header text to green
+
+const headerLinks = document.querySelectorAll('header nav a')
+const realHeaderLinks = Array.from(headerLinks)
+realHeaderLinks.map( link => link.style.color = 'green') 
