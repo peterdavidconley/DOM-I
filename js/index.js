@@ -126,7 +126,9 @@ newNav2.textContent = 'Mission'
 navigation.appendChild(newNav1)
 navigation.appendChild(newNav2)
 
+
 // Changing header text to green
+
 
 const headerLinks = document.querySelectorAll('header nav a')
 const realHeaderLinks = Array.from(headerLinks)
