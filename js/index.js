@@ -101,3 +101,18 @@ productContent.textContent = siteContent["main-content"]["product-content"];
 visionHeading.textContent = siteContent["main-content"]["vision-h4"];
 visionContent.textContent = siteContent["main-content"]["vision-content"];
 
+// Footer content getters
+
+const contactHeading = document.querySelector('.contact h4');
+const contactAddress = contactHeading.nextElementSibling;
+const contactPhone = contactAddress.nextElementSibling;
+const contactEmail = contactPhone.nextElementSibling;
+const copyright = document.querySelector('footer p')
+
+// Posting Footer content to the DOM
+
+contactHeading.textContent = siteContent.contact['contact-h4'];
+contactAddress.textContent = siteContent.contact.address;
+contactPhone.textContent = siteContent.contact.phone;
+contactEmail.textContent = siteContent.contact.email;
+copyright.textContent = siteContent.footer['copyright']
