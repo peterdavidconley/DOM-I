@@ -77,8 +77,15 @@ domImg.src = siteContent.cta['img-src']
 
 const mainFeatureHeading = document.querySelector('.top-content h4:nth-of-type(1)');
 const mainFeatureContent = document.querySelector('.top-content p:nth-of-type(1)');
-const mainAboutHeading = document.querySelector('.top-content h4:nth-of-type(2)');
-const mainAboutContent = document.querySelector('.top-content p:nth-of-type(2)');
+const mainAboutHeading = document.querySelector(".text-content:nth-of-type(2) h4");
+const mainAboutContent = document.querySelector(".text-content:nth-of-type(2) p");
+const middleImg = document.querySelector("#middle-img");
+const servicesHeading = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4");
+const servicesContent = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
+const productHeading = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+const productContent = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+const visionHeading = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4");
+const visionContent = document.querySelector(".bottom-content .text-content:nth-of-type(3) p");
 
 // Main content posting to DOM
 
@@ -86,4 +93,11 @@ mainFeatureHeading.textContent = siteContent['main-content']['features-h4'];
 mainFeatureContent.textContent = siteContent['main-content']['features-content'];
 mainAboutHeading.textContent = siteContent['main-content']['about-h4'];
 mainAboutContent.textContent = siteContent['main-content']['about-content'];
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+servicesHeading.textContent = siteContent["main-content"]["services-h4"];
+servicesContent.textContent = siteContent["main-content"]["services-content"];
+productHeading.textContent = siteContent["main-content"]["product-h4"]
+productContent.textContent = siteContent["main-content"]["product-content"];
+visionHeading.textContent = siteContent["main-content"]["vision-h4"];
+visionContent.textContent = siteContent["main-content"]["vision-content"];
 
